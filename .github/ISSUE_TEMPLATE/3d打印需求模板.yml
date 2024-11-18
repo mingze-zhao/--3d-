@@ -16,7 +16,6 @@ body:
     attributes:
       label: "👤 1. 申请人信息 - 姓名"
       placeholder: "请填写你的姓名"
-    validations:
       required: true
 
   - type: input
@@ -24,7 +23,6 @@ body:
     attributes:
       label: "学号/工号"
       placeholder: "请填写你的学号或工号"
-    validations:
       required: true
 
   - type: input
@@ -32,7 +30,6 @@ body:
     attributes:
       label: "联系方式（微信或电话）"
       placeholder: "请填写你的联系方式"
-    validations:
       required: true
 
   - type: input
@@ -41,7 +38,6 @@ body:
       label: "📐 2. 打印模型详情 - 模型文件名称"
       description: "请上传文件到此 Issue 或提供链接"
       placeholder: "请填写模型文件名称"
-    validations:
       required: true
 
   - type: dropdown
@@ -49,11 +45,10 @@ body:
     attributes:
       label: "文件格式"
       options:
-        - `.stl`
-        - `.obj`
-        - `.step`
-        - `其他`
-    validations:
+        - ".stl"
+        - ".obj"
+        - ".step"
+        - "其他"
       required: true
 
   - type: input
@@ -61,7 +56,6 @@ body:
     attributes:
       label: "模型尺寸（长×宽×高，单位：mm）"
       placeholder: "请填写尺寸"
-    validations:
       required: true
 
   - type: dropdown
@@ -82,7 +76,6 @@ body:
         - "PETG"
         - "TPU"
         - "其他"
-    validations:
       required: true
 
   - type: input
@@ -96,7 +89,6 @@ body:
     attributes:
       label: "📋 3. 需求说明 - 打印数量"
       placeholder: "请填写数量"
-    validations:
       required: true
 
   - type: dropdown
@@ -126,7 +118,6 @@ body:
     attributes:
       label: "📅 4. 申请日期"
       placeholder: "请填写申请日期"
-    validations:
       required: true
 
   - type: input
@@ -139,7 +130,7 @@ body:
     attributes:
       value: |
         ## 📝 5. 审核与确认（由管理员填写）
-  
+
   - type: dropdown
     id: review_status
     attributes:
