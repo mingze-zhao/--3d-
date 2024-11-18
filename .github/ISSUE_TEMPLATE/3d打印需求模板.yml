@@ -1,0 +1,170 @@
+name: "🖨️ 3D 打印需求申请"
+description: "提交 3D 打印需求申请表，方便我们处理你的打印请求"
+title: "[3D 打印申请] - "
+labels: ["3D Printing"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        # 🖨️ 3D 打印需求申请表
+
+        请详细填写以下表格，以确保我们能够更好地处理你的打印需求。
+
+  - type: input
+    id: applicant_name
+    attributes:
+      label: "👤 1. 申请人信息 - 姓名"
+      placeholder: "请填写你的姓名"
+    validations:
+      required: true
+
+  - type: input
+    id: student_id
+    attributes:
+      label: "学号/工号"
+      placeholder: "请填写你的学号或工号"
+    validations:
+      required: true
+
+  - type: input
+    id: contact
+    attributes:
+      label: "联系方式（微信或电话）"
+      placeholder: "请填写你的联系方式"
+    validations:
+      required: true
+
+  - type: input
+    id: model_filename
+    attributes:
+      label: "📐 2. 打印模型详情 - 模型文件名称"
+      description: "请上传文件到此 Issue 或提供链接"
+      placeholder: "请填写模型文件名称"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: file_format
+    attributes:
+      label: "文件格式"
+      options:
+        - `.stl`
+        - `.obj`
+        - `.step`
+        - `其他`
+    validations:
+      required: true
+
+  - type: input
+    id: model_size
+    attributes:
+      label: "模型尺寸（长×宽×高，单位：mm）"
+      placeholder: "请填写尺寸"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: print_precision
+    attributes:
+      label: "期望的打印精度"
+      options:
+        - "普通 (0.2mm)"
+        - "高精度 (0.1mm)"
+
+  - type: dropdown
+    id: material
+    attributes:
+      label: "预计使用的打印材料"
+      options:
+        - "PLA"
+        - "ABS"
+        - "PETG"
+        - "TPU"
+        - "其他"
+    validations:
+      required: true
+
+  - type: input
+    id: color
+    attributes:
+      label: "期望颜色"
+      placeholder: "请填写颜色"
+
+  - type: input
+    id: quantity
+    attributes:
+      label: "📋 3. 需求说明 - 打印数量"
+      placeholder: "请填写数量"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: post_processing
+    attributes:
+      label: "是否需要后期处理"
+      options:
+        - "是"
+        - "否"
+
+  - type: dropdown
+    id: assembly
+    attributes:
+      label: "是否需要组装"
+      options:
+        - "是"
+        - "否"
+
+  - type: textarea
+    id: additional_requirements
+    attributes:
+      label: "其他要求"
+      placeholder: "请填写其他特殊要求"
+
+  - type: input
+    id: request_date
+    attributes:
+      label: "📅 4. 申请日期"
+      placeholder: "请填写申请日期"
+    validations:
+      required: true
+
+  - type: input
+    id: due_date
+    attributes:
+      label: "期望完成日期"
+      placeholder: "请填写期望完成的日期"
+
+  - type: markdown
+    attributes:
+      value: |
+        ## 📝 5. 审核与确认（由管理员填写）
+  
+  - type: dropdown
+    id: review_status
+    attributes:
+      label: "审核状态"
+      options:
+        - "未开始"
+        - "审核中"
+        - "已批准"
+        - "拒绝"
+
+  - type: input
+    id: estimated_completion
+    attributes:
+      label: "预计完成时间"
+      placeholder: "请填写预计完成时间"
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: "备注"
+      placeholder: "管理员填写备注"
+
+  - type: markdown
+    attributes:
+      value: |
+        > ⚠️ **注意事项**：
+        > - 请尽量详细填写以上内容，以确保打印需求顺利进行。
+        > - 上传的模型文件请确保已优化，并且尺寸正确。
